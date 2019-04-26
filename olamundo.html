@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olá Mundo</title>
+   
+</head>
+<body>
+    <h1 id="h001">XXX</h1>
+    <input type="text" id="i1"/>
+    <input type="text" id="i2"/>
+    <button id="b01">Calcula</button>
+</body>
+<script>
+        var heading = document.getElementById("h001");
+        console.log(heading.innerHTML);
+        heading.innerHTML = "Boas Pessoal";
+
+        var button = document.getElementById("b01");
+        console.log(button);
+        button.addEventListener("click", multiplicaEAfixa);
+
+
+        function multiplicaEAfixa() {
+            var i1v = document.getElementById("i1").value;
+            var i2v = document.getElementById("i2").value;
+
+            document.getElementById("i1").value = "";
+            document.getElementById("i2").value = "";
+            var resultado = i1v * i2v;
+            console.log(resultado);
+
+            var novopres = document.createElement("p");
+            novopres.innerHTML = "resultado : " + resultado;
+            document.body.appendChild(novopres);
+
+        }
+</script>
+</html>
